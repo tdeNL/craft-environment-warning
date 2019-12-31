@@ -1,0 +1,32 @@
+{
+    "name": "tde/craft-environment-warning",
+    "description": "This plugin has the ability to show a warning flash message on top of the website to warn the user he/she is visiting a non-production website.",
+    "type": "craft-plugin",
+    "require": {
+        "craftcms/cms": "^3.2"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "TDE",
+            "email": "info@tde.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "tde\\craft\\environmentwarning\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Environment Warning",
+        "handle": "environment-warning",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/tdeNL/craft-environment-warning/master/CHANGELOG.md",
+        "documentationUrl": "https://github.com/tdeNL/craft-environment-warning",
+        "components": {
+            "productBundleService": "tde\\craft\\environmentwarning\\services\\GitService"
+        },
+        "class": "tde\\craft\\environmentwarning\\Plugin"
+    }
+}

@@ -1,0 +1,9 @@
+<div style="background-color:#c0392b;padding:5px 0;text-align:center;color:#fff;position:relative;z-index:99999;">
+	{{ 'caution'|t('environment-warning', {baseUrl: currentSite.baseUrl})|raw }}
+	{% if productionUrl %}
+		{{ 'production-link'|t('environment-warning', {productionUrl: productionUrl})|raw }}
+	{% endif %}
+	{% if branchName %}
+		{{ 'branch-name'|t('environment-warning', {branchName: branchName})|raw }}
+	{% endif %}
+</div>
